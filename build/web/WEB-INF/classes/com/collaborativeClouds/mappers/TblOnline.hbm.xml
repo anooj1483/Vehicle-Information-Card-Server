@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 2, 2014 11:43:14 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.collaborativeClouds.mappers.TblOnline" table="tbl_online" catalog="vic">
+        <id name="username" type="string">
+            <column name="username" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="sessionId" type="string">
+            <column name="session_id" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

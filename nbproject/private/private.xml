@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Synclovis/workspace/VIC/src/java/com/collaborativeClouds/rest/LoginResource.java</file>
+            <file>file:/C:/Synclovis/workspace/VIC/src/java/ServerReverseEngineering.reveng.xml</file>
+            <file>file:/C:/Synclovis/workspace/VIC/src/java/com/collaborativeClouds/workers/LoginLogoutHandler.java</file>
+            <file>file:/C:/Synclovis/workspace/VIC/src/java/hibernate.cfg.xml</file>
+            <file>file:/C:/Synclovis/workspace/VIC/src/java/session_online.reveng.xml</file>
+            <file>file:/C:/Synclovis/workspace/VIC/web/index.html</file>
+            <file>file:/C:/Synclovis/workspace/VIC/src/java/com/collaborativeClouds/rest/LogoutResource.java</file>
+            <file>file:/C:/Synclovis/workspace/VIC/src/java/com/collaborativeClouds/workers/SessionOperator.java</file>
+            <file>file:/C:/Synclovis/workspace/VIC/src/java/com/collaborativeClouds/utils/NewHibernateUtil.java</file>
+            <file>file:/C:/Synclovis/workspace/VIC/src/java/com/collaborativeClouds/rest/ApplicationConfig.java</file>
+        </group>
+    </open-files>
+</project-private>

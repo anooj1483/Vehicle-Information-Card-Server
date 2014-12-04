@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 2, 2014 11:43:14 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.collaborativeClouds.mappers.TblVehiclePollution" table="tbl_vehicle_pollution" catalog="vic">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="registrationNumber" type="string">
+            <column name="registration_number" length="100" not-null="true" />
+        </property>
+        <property name="dateOfTesting" type="date">
+            <column name="date_of_testing" length="10" not-null="true" />
+        </property>
+        <property name="serialNo" type="string">
+            <column name="serial_no" length="45" not-null="true" />
+        </property>
+        <property name="timeOfTesting" type="string">
+            <column name="time_of_testing" length="45" not-null="true" />
+        </property>
+        <property name="speedometerReading" type="int">
+            <column name="speedometer_reading" not-null="true" />
+        </property>
+        <property name="validUpto" type="date">
+            <column name="valid_upto" length="10" not-null="true" />
+        </property>
+        <property name="certificateImagePath" type="string">
+            <column name="certificate_image_path" length="100" not-null="true" />
+        </property>
+        <property name="issuedBy" type="string">
+            <column name="issued_by" length="200" not-null="true" />
+        </property>
+        <property name="issuerAddress" type="string">
+            <column name="issuer_address" length="250" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 2, 2014 11:43:14 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.collaborativeClouds.mappers.TblVehicleTax" table="tbl_vehicle_tax" catalog="vic">
+        <id name="registrationNumber" type="string">
+            <column name="registration_number" length="100" />
+            <generator class="foreign">
+                <param name="property">tblVehicleRegistration</param>
+            </generator>
+        </id>
+        <one-to-one name="tblVehicleRegistration" class="com.collaborativeClouds.mappers.TblVehicleRegistration" constrained="true"></one-to-one>
+        <property name="taxLicenceNumber" type="string">
+            <column name="tax_licence_number" length="45" not-null="true" />
+        </property>
+        <property name="paidAmount" type="int">
+            <column name="paid_amount" not-null="true" />
+        </property>
+        <property name="amountPaidOn" type="string">
+            <column name="amount_paid_on" length="45" not-null="true" />
+        </property>
+        <property name="paidFrom" type="string">
+            <column name="paid_from" length="45" not-null="true" />
+        </property>
+        <property name="paidTo" type="string">
+            <column name="paid_to" length="45" not-null="true" />
+        </property>
+        <property name="cessAmount" type="int">
+            <column name="cess_amount" not-null="true" />
+        </property>
+        <property name="cessDate" type="string">
+            <column name="cess_date" length="45" not-null="true" />
+        </property>
+        <property name="dateOfDelivery" type="string">
+            <column name="date_of_delivery" length="45" not-null="true" />
+        </property>
+        <property name="dateOfRegistration" type="string">
+            <column name="date_of_registration" length="45" not-null="true" />
+        </property>
+        <property name="registrationValidityFrom" type="string">
+            <column name="registration_validity_from" length="45" not-null="true" />
+        </property>
+        <property name="registrationValidityTo" type="string">
+            <column name="registration_validity_to" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

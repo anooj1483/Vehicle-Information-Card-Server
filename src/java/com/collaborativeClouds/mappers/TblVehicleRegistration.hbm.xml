@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 2, 2014 11:43:14 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.collaborativeClouds.mappers.TblVehicleRegistration" table="tbl_vehicle_registration" catalog="vic">
+        <id name="registrationNumber" type="string">
+            <column name="registration_number" length="100" />
+            <generator class="assigned"></generator>
+        </id>
+        <property name="description" type="string">
+            <column name="description" not-null="true" />
+        </property>
+        <property name="dealerName" type="string">
+            <column name="dealer_name" length="100" not-null="true" />
+        </property>
+        <property name="dealerAddress" type="string">
+            <column name="dealer_address" length="65535" not-null="true" />
+        </property>
+        <property name="makerName" type="string">
+            <column name="maker_name" length="200" not-null="true" />
+        </property>
+        <property name="ownerName" type="string">
+            <column name="owner_name" length="50" not-null="true" />
+        </property>
+        <property name="ownerGuide" type="string">
+            <column name="owner_guide" length="50" not-null="true" />
+        </property>
+        <property name="ownerGuideRelation" type="string">
+            <column name="owner_guide_relation" length="20" not-null="true" />
+        </property>
+        <property name="ownerPermAddress" type="string">
+            <column name="owner_perm_address" not-null="true" />
+        </property>
+        <property name="ownerTempAddress" type="string">
+            <column name="owner_temp_address" not-null="true" />
+        </property>
+        <property name="durationOfStay" type="java.lang.Integer">
+            <column name="duration_of_stay" />
+        </property>
+        <property name="panNumber" type="string">
+            <column name="pan_number" length="45" />
+        </property>
+        <property name="birthPlace" type="string">
+            <column name="birth_place" length="100" />
+        </property>
+        <property name="migratedDate" type="string">
+            <column name="migrated_date" length="25" />
+        </property>
+        <property name="exarmyImportedVehicle" type="string">
+            <column name="exarmy_imported_vehicle" length="45" not-null="true" />
+        </property>
+        <property name="vehicleClass" type="string">
+            <column name="vehicle_class" length="100" not-null="true" />
+        </property>
+        <property name="vehicleIs" type="string">
+            <column name="vehicle_is" length="100" not-null="true" />
+        </property>
+        <property name="bodyType" type="string">
+            <column name="body_type" length="100" not-null="true" />
+        </property>
+        <property name="vehicleType" type="string">
+            <column name="vehicle_type" length="100" />
+        </property>
+        <property name="manufactureMonth" type="string">
+            <column name="manufacture_month" length="25" not-null="true" />
+        </property>
+        <property name="manufactureYear" type="string">
+            <column name="manufacture_year" length="10" not-null="true" />
+        </property>
+        <property name="cylinders" type="int">
+            <column name="cylinders" not-null="true" />
+        </property>
+        <property name="hp" type="int">
+            <column name="hp" not-null="true" />
+        </property>
+        <property name="cubicCapacity" type="int">
+            <column name="cubic_capacity" not-null="true" />
+        </property>
+        <property name="makerClassification" type="string">
+            <column name="maker_classification" length="100" not-null="true" />
+        </property>
+        <property name="chassisNumber" type="string">
+            <column name="chassis_number" length="200" not-null="true" />
+        </property>
+        <property name="engineNumber" type="string">
+            <column name="engine_number" length="200" not-null="true" />
+        </property>
+        <property name="seating" type="int">
+            <column name="seating" not-null="true" />
+        </property>
+        <property name="fuel" type="string">
+            <column name="fuel" length="50" not-null="true" />
+        </property>
+        <property name="unladenWeight" type="int">
+            <column name="unladen_weight" not-null="true" />
+        </property>
+        <property name="prevRegistration" type="string">
+            <column name="prev_registration" length="350" />
+        </property>
+        <property name="color" type="string">
+            <column name="color" length="100" not-null="true" />
+        </property>
+        <property name="wheelBase" type="string">
+            <column name="wheel_base" length="25" not-null="true" />
+        </property>
+        <one-to-one name="tblVehicleTax" class="com.collaborativeClouds.mappers.TblVehicleTax"></one-to-one>
+    </class>
+</hibernate-mapping>
