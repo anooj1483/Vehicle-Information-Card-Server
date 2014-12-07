@@ -48,8 +48,10 @@ public class LogoutResource {
 
         LoginLogoutHandler mHandler=new LoginLogoutHandler();
         String xsession = headers.getRequestHeader("x-session").get(0);
-        System.err.println(xsession+" "+userdata);
-        return mHandler.Logout(userdata,xsession)+"";
+        String username=headers.getRequestHeader("username").get(0);
+        
+        System.err.println(xsession+" "+userdata+" "+username);
+        return mHandler.Logout(username,xsession)+"";
    
     }
 

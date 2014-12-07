@@ -65,15 +65,15 @@ public class SessionOperator {
         }
     }
 
-    public int removeSession(String userdata, String session_id ) {
+    public int removeSession(String username, String session_id ) {
         try {
             SessionFactory sessFact = new Configuration().configure().buildSessionFactory();
             mSession=null;
             mSession = sessFact.openSession();
             mTransaction = mSession.beginTransaction();
-            JSONObject mObject = new JSONObject(userdata);
-            String username = mObject.getString("username");
-            System.err.println("USER: "+username);
+            //JSONObject mObject = new JSONObject(userdata);
+            //String username = mObject.getString("username");
+            //System.err.println("USER: "+username);
             Query deleteOnline = mSession.createQuery("delete from TblOnline where username='" + username + "' and sessionId='" + session_id + "'");
             int status = deleteOnline.executeUpdate();
             mTransaction.commit();

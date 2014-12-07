@@ -64,10 +64,10 @@ public class LoginLogoutHandler {
         }
     }
 
-    public int Logout(String userdata,String sessionid) throws JSONException {
+    public int Logout(String username,String sessionid) throws JSONException {
         try {
             SessionOperator mSessionOperator=new SessionOperator();
-            int status=mSessionOperator.removeSession(userdata,sessionid);
+            int status=mSessionOperator.removeSession(username,sessionid);
             return status;
         } catch (Exception ex) {
             return 0;

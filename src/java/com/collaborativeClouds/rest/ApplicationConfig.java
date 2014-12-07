@@ -34,6 +34,7 @@ public class ApplicationConfig extends Application {
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(com.collaborativeClouds.rest.LoginResource.class);
         resources.add(com.collaborativeClouds.rest.LogoutResource.class);
+        resources.add(com.collaborativeClouds.rest.RegisterResource.class);
     }
     
 }
