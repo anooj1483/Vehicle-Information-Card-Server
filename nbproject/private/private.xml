@@ -5,13 +5,12 @@
         <group>
             <file>file:/C:/Synclovis/workspace/VIC/src/java/com/collaborativeClouds/rest/LoginResource.java</file>
             <file>file:/C:/Synclovis/workspace/VIC/src/java/ServerReverseEngineering.reveng.xml</file>
-            <file>file:/C:/Synclovis/workspace/VIC/src/java/com/collaborativeClouds/workers/LoginLogoutHandler.java</file>
             <file>file:/C:/Synclovis/workspace/VIC/src/java/hibernate.cfg.xml</file>
             <file>file:/C:/Synclovis/workspace/VIC/src/java/com/collaborativeClouds/mappers/TblVehicleRegistration.java</file>
             <file>file:/C:/Synclovis/workspace/VIC/web/index.html</file>
             <file>file:/C:/Synclovis/workspace/VIC/src/java/com/collaborativeClouds/rest/LogoutResource.java</file>
             <file>file:/C:/Synclovis/workspace/VIC/src/java/com/collaborativeClouds/utils/NewHibernateUtil.java</file>
-            <file>file:/C:/Synclovis/workspace/VIC/src/java/com/collaborativeClouds/rest/ApplicationConfig.java</file>
+            <file>file:/C:/Synclovis/workspace/VIC/src/java/com/collaborativeClouds/rest/RegisterResource.java</file>
         </group>
     </open-files>
 </project-private>

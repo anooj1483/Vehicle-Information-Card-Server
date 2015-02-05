@@ -35,6 +35,7 @@ public class ApplicationConfig extends Application {
         resources.add(com.collaborativeClouds.rest.LoginResource.class);
         resources.add(com.collaborativeClouds.rest.LogoutResource.class);
         resources.add(com.collaborativeClouds.rest.RegisterResource.class);
+        resources.add(com.collaborativeClouds.rest.TaxResource.class);
     }
     
 }

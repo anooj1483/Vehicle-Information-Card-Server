@@ -5,9 +5,13 @@
  */
 package com.collaborativeClouds.workers;
 
+import com.collaborativeClouds.mappers.TblAdmin;
 import com.collaborativeClouds.mappers.TblVehicleRegistration;
+import com.google.gson.Gson;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -112,4 +116,48 @@ public class RegisterVehicle {
         }
     }
 
+    public String getRegisterInfo(String vehicleInfo) {
+        try {
+            SessionFactory sessFact = new Configuration().configure().buildSessionFactory();
+            mSession = sessFact.openSession();
+            mTransaction = mSession.beginTransaction();
+            List<TblVehicleRegistration> mVehicleInfo = null;
+
+            JSONObject mObject = new JSONObject(vehicleInfo);
+            String registration_no = mObject.get("registration_no").toString();
+
+            Query mVehicleData = mSession.createQuery("from TblVehicleRegistration where registration_number='" + registration_no + "'");
+            mVehicleInfo = (List<TblVehicleRegistration>) mVehicleData.list();
+            if (mVehicleInfo.size() > 0) {
+                String json = new Gson().toJson(mVehicleInfo);
+                return  json;
+            } else {
+                return "No Data Found";
+            }
+
+        } catch (Exception ex) {
+            return "Failed";
+        }
+    }
+    
+    public String getVehicleRegistrationNumber(){
+        try{
+            SessionFactory sessFact = new Configuration().configure().buildSessionFactory();
+            mSession = sessFact.openSession();
+            mTransaction = mSession.beginTransaction();
+            List<TblVehicleRegistration> mVehicleInfo = null;
+            Query mVehicleData = mSession.createQuery("select registrationNumber from TblVehicleRegistration");
+            mVehicleInfo = (List<TblVehicleRegistration>) mVehicleData.list();
+            if (mVehicleInfo.size() > 0) {
+                String json = new Gson().toJson(mVehicleInfo);
+                return  json;
+            } else {
+                return "No Data Found";
+            }
+ 
+            
+        }catch(Exception ex){
+            return "Failed";
+        }
+    }
 }
